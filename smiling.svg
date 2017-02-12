@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="8.26772in" height="11.6929in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8268 11693"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#373435;stroke-width:98.4252}
+    .fil2 {fill:none}
+    .fil3 {fill:#373435}
+    .fil0 {fill:#FEFEFE}
+    .fil1 {fill:#FFF212}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="1762" y="2007" width="3830" height="3830"/>
+  <path class="fil1 str0" d="M2382 5178l2458 -895c-27,-97 25,-199 120,-234 100,-37 212,15 248,116 28,76 5,157 -51,209 76,4 146,52 173,127 37,100 -15,212 -116,248 -96,35 -201,-11 -243,-102l-2458 895c27,97 -25,199 -120,234 -100,37 -212,-15 -248,-116 -28,-76 -5,-157 51,-209 -76,-4 -146,-52 -173,-127 -37,-100 15,-212 116,-248 96,-35 201,11 243,102z"/>
+  <path class="fil1 str0" d="M2514 4284l2458 895c41,-91 147,-137 243,-102 100,37 152,148 116,248 -28,76 -97,124 -173,127 56,51 78,133 51,209 -37,100 -148,152 -248,116 -96,-35 -147,-137 -120,-234l-2458 -895c-41,91 -147,137 -243,102 -100,-37 -152,-148 -116,-248 28,-76 97,-124 173,-127 -56,-51 -78,-133 -51,-209 37,-100 148,-152 248,-116 96,35 147,137 120,234z"/>
+  <circle class="fil1 str0" cx="3677" cy="3227" r="1165"/>
+  <path class="fil2 str0" d="M4320 3471c-171,219 -402,341 -643,341 -241,0 -472,-123 -643,-341"/>
+  <path class="fil3 str0" d="M4325 2818c0,0 0,0 0,0 0,136 -111,247 -247,247 -136,0 -247,-111 -247,-247l0 -124 494 0 0 124z"/>
+  <line class="fil2 str0" x1="3831" y1="2737" x2="3017" y2= "2267" />
+  <line class="fil2 str0" x1="4260" y1="2985" x2="4842" y2= "3321" />
+  <path class="fil2 str0" d="M3030 2941c0,-136 111,-247 247,-247 136,0 247,111 247,247"/>
+ </g>
+</svg>
