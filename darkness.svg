@@ -25,11 +25,11 @@
       <stop
          id="stop4797"
          offset="0"
-         style="stop-color:#000000;stop-opacity:1" />
+         style="stop-color:#000000;stop-opacity:0.94835681" />
       <stop
          id="stop4801"
          offset="1"
-         style="stop-color:#333333;stop-opacity:1" />
+         style="stop-color:#333333;stop-opacity:0.52582157" />
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
@@ -166,8 +166,7 @@
        width="130.42752"
        height="130.42752"
        x="34.288475"
-       y="46.113171"
-       sodipodi:insensitive="true" />
+       y="46.113171" />
     <ellipse
        id="path3691"
        cx="98.443901"
