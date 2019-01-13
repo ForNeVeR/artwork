@@ -36,7 +36,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="602.94225"
+     inkscape:cx="521.51367"
      inkscape:cy="364.66209"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -177,7 +177,7 @@
        r="7.2220712" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.41608429px;line-height:1.25;font-family:Iosevka;-inkscape-font-specification:'Iosevka, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.73541725"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.41608484px;line-height:1.25;font-family:Iosevka;-inkscape-font-specification:'Iosevka, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.73541725;"
        x="88.809349"
        y="193.39273"
        id="text900"><tspan
@@ -185,7 +185,7 @@
          id="tspan898"
          x="88.809349"
          y="193.39273"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.41608429px;font-family:Iosevka;-inkscape-font-specification:'Iosevka, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.73541725">git</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.41608484px;font-family:Iosevka;-inkscape-font-specification:'Iosevka, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;stroke-width:1.73541725;">git</tspan></text>
   </g>
   <path
      style="display:inline;fill:#81675b;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
