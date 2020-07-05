@@ -7,7 +7,7 @@ let private printUsage() =
     printfn "Arguments: <resolution> <cycles> <output>"
 
 let private palette = Array.map Color.FromArgb [|
-     0xFF070707
+     0x00000000
      0xFF1F0707
      0xFF2F0F07
      0xFF470F07
@@ -54,14 +54,27 @@ let private createModel resolution =
         else 0
     )
 
-let private decreasePossibility = 0.3
+let private decreasePossibility = 0.15
+let private horizontalFlowPossibility = 0.015
 
 let private processStep (rng: Random) model =
+    let ifEvent possibility trueVal falseVal =
+        if rng.NextDouble() >= 1.0 - possibility then trueVal else falseVal
+
+    let get = Array2D.get model
+
+    let maxNeighbour x y =
+        match x, y with
+        | 0, _ -> max (get x y) (get (x + 1) y)
+        | x, _ when x = Array2D.length1 model - 1 -> max (get (x - 1) y) (get x y)
+        | _, _ -> [| get (x - 1) y; get x y; get (x + 1) y |] |> Array.max
+
     Array2D.mapi (fun x y current ->
         if y = 0 then current
         else
-            let below = Array2D.get model x (y - 1)
-            let newValue = if rng.NextDouble() >= 1.0 - decreasePossibility then below - 1 else below
+            let below = get x (y - 1)
+            let newValue = ifEvent horizontalFlowPossibility (maxNeighbour x y) below
+            let newValue = ifEvent decreasePossibility (newValue - 1) newValue
             Math.Clamp(newValue, 0, gradations - 1)
     ) model
 
@@ -75,6 +88,7 @@ let private saveImage model (output: Stream) =
 let private generateImage rng resolution cycles output =
     let mutable model = createModel resolution
     for i in 1..cycles do
+        printfn "Processing step %d / %d" i cycles
         model <- processStep rng model
     saveImage model output
 
