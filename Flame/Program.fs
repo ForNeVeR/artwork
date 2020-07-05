@@ -54,15 +54,16 @@ let private createModel resolution =
         else 0
     )
 
-let private processStep model =
+let private decreasePossibility = 0.3
+
+let private processStep (rng: Random) model =
     Array2D.mapi (fun x y current ->
         if y = 0 then current
         else
             let below = Array2D.get model x (y - 1)
-            Math.Clamp(below - 1, 0, gradations - 1)
+            let newValue = if rng.NextDouble() >= 1.0 - decreasePossibility then below - 1 else below
+            Math.Clamp(newValue, 0, gradations - 1)
     ) model
-
-
 
 let private saveImage model (output: Stream) =
     use bitmap = new Bitmap(Array2D.length1 model, Array2D.length2 model)
@@ -71,10 +72,10 @@ let private saveImage model (output: Stream) =
     ) model
     bitmap.Save(output, ImageFormat.Png)
 
-let private generateImage resolution cycles output =
+let private generateImage rng resolution cycles output =
     let mutable model = createModel resolution
     for i in 1..cycles do
-        model <- processStep model
+        model <- processStep rng model
     saveImage model output
 
 [<EntryPoint>]
@@ -83,6 +84,7 @@ let main: string[] -> int = function
     let resolution = int resolution
     let cycles = int cycles
     use output = new FileStream(output, FileMode.Create)
-    generateImage resolution cycles output
+    let rng = Random()
+    generateImage rng resolution cycles output
     0
 | _ -> printUsage(); 1
