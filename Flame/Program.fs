@@ -7,7 +7,7 @@ let private printUsage() =
     printfn "Arguments: <resolution> <cycles> <output>"
 
 let private palette = Array.map Color.FromArgb [|
-     0x00000000
+     0x80000000
      0xFF1F0707
      0xFF2F0F07
      0xFF470F07
