@@ -7,7 +7,7 @@ let private printUsage() =
     printfn "Arguments: <resolution> <cycles> <output>"
 
 let private palette = Array.map Color.FromArgb [|
-     0x80000000
+     0x00000000
      0xFF1F0707
      0xFF2F0F07
      0xFF470F07
@@ -54,7 +54,8 @@ let private createModel resolution =
         else 0
     )
 
-let private decreasePossibility = 0.15
+let private heightMax = 2.0
+let private decreasePossibility = 0.2
 let private horizontalFlowPossibility = 0.015
 
 let private processStep (rng: Random) model =
@@ -70,9 +71,13 @@ let private processStep (rng: Random) model =
         | _, _ -> [| get (x - 1) y; get x y; get (x + 1) y |] |> Array.max
 
     Array2D.mapi (fun x y current ->
-        if y = 0 then current
+        let height =
+            1.0 + rng.NextDouble() * (heightMax - 1.0)
+            |> round
+            |> int
+        if y < height then current
         else
-            let below = get x (y - 1)
+            let below = get x (y - height)
             let newValue = ifEvent horizontalFlowPossibility (maxNeighbour x y) below
             let newValue = ifEvent decreasePossibility (newValue - 1) newValue
             Math.Clamp(newValue, 0, gradations - 1)
