@@ -16,8 +16,9 @@ the `png` directory.
 
 ## Flame
 
-There's a program to generate flame images written in style of DOOM. Execute
-with .NET 3.1+ SDK:
+There's a program to generate flame images written in style of DOOM
+ (implementation partially based on [this article][fire-spreading-algo]).
+ Execute with .NET 3.1+ SDK:
 
 ```
 $ dotnet run -- 256 80 T:\Temp\flame.png
@@ -37,5 +38,6 @@ this constitutes a 'fair use' of any such copyrighted material as parody.
 The code in this repository is licensed under the [MIT license][mit-license].
 
 [cc-by-license]: https://creativecommons.org/licenses/by/4.0/
+[fire-spreading-algo]: https://habr.com/ru/post/435122/
 
 [logo-cc-by]: https://i.creativecommons.org/l/by/4.0/80x15.png

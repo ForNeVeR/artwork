@@ -6,7 +6,46 @@ open System.Drawing
 let private printUsage() =
     printfn "Arguments: <resolution> <cycles> <output>"
 
-let private gradations = 30
+let private palette = Array.map Color.FromArgb [|
+     0xFF070707
+     0xFF1F0707
+     0xFF2F0F07
+     0xFF470F07
+     0xFF571707
+     0xFF671F07
+     0xFF771F07
+     0xFF8F2707
+     0xFF9F2F07
+     0xFFAF3F07
+     0xFFBF4707
+     0xFFC74707
+     0xFFDF4F07
+     0xFFDF5707
+     0xFFDF5707
+     0xFFD75F07
+     0xFFD7670F
+     0xFFCF6F0F
+     0xFFCF770F
+     0xFFCF7F0F
+     0xFFCF8717
+     0xFFC78717
+     0xFFC78F17
+     0xFFC7971F
+     0xFFBF9F1F
+     0xFFBF9F1F
+     0xFFBFA727
+     0xFFBFA727
+     0xFFBFAF2F
+     0xFFB7AF2F
+     0xFFB7B72F
+     0xFFB7B737
+     0xFFCFCF6F
+     0xFFDFDF9F
+     0xFFEFEFC7
+     0xFFFFFFFF
+|]
+
+let private gradations = palette.Length
 
 let private createModel resolution =
     Array2D.init resolution resolution (fun _ y ->
@@ -23,14 +62,7 @@ let private processStep model =
             Math.Clamp(below - 1, 0, gradations - 1)
     ) model
 
-let private palette = [|
-     let mutable color = Color.Black
-     let increment = Byte.MaxValue / (byte gradations)
-     for _ in 1..(gradations - 1) do
-         color <- Color.FromArgb(int <| color.R + increment, int color.G, int color.B)
-         color
-     Color.Red
-|]
+
 
 let private saveImage model (output: Stream) =
     use bitmap = new Bitmap(Array2D.length1 model, Array2D.length2 model)
