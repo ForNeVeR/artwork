@@ -39,5 +39,6 @@ The code in this repository is licensed under the [MIT license][mit-license].
 
 [cc-by-license]: https://creativecommons.org/licenses/by/4.0/
 [fire-spreading-algo]: https://habr.com/ru/post/435122/
+[mit-license]: ./License.md
 
 [logo-cc-by]: https://i.creativecommons.org/l/by/4.0/80x15.png
