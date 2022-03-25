@@ -27,9 +27,8 @@ $ #  <resolution> <steps> <outfile>
 
 ## License [![logo-cc-by][]][cc-by-license]
 
-The images in this repositories are licensed under a [Creative Commons
-Attribution 4.0 International License][cc-by-license], with the exception of the
- `memes` directory.
+The images in this repository are licensed under a [Creative Commons
+Attribution 4.0 International License][cc-by-license], with the exception of the `memes` directory.
 
 The `memes` directory may contain copyrighted material the use of which has not
 always been specifically authorized by the copyright owner. It is believed that
