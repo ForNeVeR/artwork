@@ -2,7 +2,7 @@ param (
     $Backgrounds = @('black', 'white', 'none'),
     $Images = "$PSScriptRoot/*.svg",
     $Output = "$PSScriptRoot/png",
-    $Size = '512x512'
+    $Size = '1024x1024'
 )
 
 $ErrorActionPreference = 'Stop'
